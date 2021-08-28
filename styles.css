@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+:root {
+  --color1: #051937;
+  --color2: #a8eb12;
+}
+
+* {
+  font-family: "Audiowide", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    -45deg,
+    var(--color1),
+    #004d7a,
+    #008793,
+    #00bf72,
+    var(--color2)
+  );
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+.sec {
+  width: 51px;
+}
+.date {
+  border: 5px solid black;
+  padding: 5px 20px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.time {
+  border: 5px solid black;
+  margin-top: 10px;
+  padding: 5px 20px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.colon {
+  animation: colonBeep 1s infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes colonBeep {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
